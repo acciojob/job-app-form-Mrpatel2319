@@ -1,16 +1,123 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .gender-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="form-container">
+        <h1>Job Application Form</h1>
+        <form action="#" method="POST">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender*</label>
+            <div class="gender-group">
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="Other" required>
+                <label for="other">Other</label>
+            </div>
+
+            <label for="laptop">Laptop Brands</label>
+            <select id="laptop" name="laptop">
+                <option value="">--Select a Brand--</option>
+                <option value="Apple">Apple</option>
+                <option value="Asus">Asus</option>
+                <option value="HP">HP</option>
+            </select>
+
+            <label for="age">Age*</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="dob">Date of Birth*</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="portfolio">Portfolio URL</label>
+            <input type="url" id="portfolio" name="portfolio">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
-
 </html>
